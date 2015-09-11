@@ -1,0 +1,7 @@
+*remove superfluous code
+	- remove wizard
+	- remove modules
+*Factoids module
+	- implement the module
+	- SQL backend for the module
+
