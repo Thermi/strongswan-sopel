@@ -39,7 +39,7 @@ entries={
 	"documentation" : documentation,
 	"obfuscation" : obfuscation,
 	"logging" : logging,
-	"IDs" : "ids
+	"IDs" : ids
 	}
 
 def help(bot, trigger):
