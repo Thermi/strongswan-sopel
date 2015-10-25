@@ -46,7 +46,7 @@ def help(bot, trigger):
 	text="If you require help, please state your problem, what you have already tried, "
 	text+="your ipsec.conf and complete logs showing the problem. Search through the strongswan-users mailing"
 	text+="list's archives. Most problems were discussed on there before."
-        if trigger.group(2):
+	if trigger.group(2):
                 text=trigger.group(2) + ": " + text
 	bot.say(text, 1)	
 
