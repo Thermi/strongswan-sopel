@@ -90,8 +90,7 @@ def ids(bot, trigger):
 @example('.pastebin',
     r'Use a pastebin for any text longer than three lines. Do not paste into the channel.',
     re=true
-
-def strongswan(bot,trigger):
+def strongswan(bot, trigger):
     # check if privmsg or in #strongswan
     if trigger.is_privmsg or trigger.sender == "#strongswan":
         searchterm = trigger.group(1)
