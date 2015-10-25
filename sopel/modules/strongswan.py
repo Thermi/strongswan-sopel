@@ -10,7 +10,7 @@ https://strongswan.org
 from __future__ import unicode_literals
 
 from sopel import web
-from sopel.module import commands, example
+import sopel.module
 from sopel.config.types import StaticSection, FilenameAttribute
 from sopel.logger import get_logger
 
