@@ -60,7 +60,7 @@ def logging(bot, trigger):
 
 def pastebin(bot, trigger):
     text="Please use a pastebin service, for example bpaste.net, for showing more than two lines."
-        if trigger.group(2):
+    if trigger.group(2):
                 text=trigger.group(2) + ": " + text
     bot.say(text, 1)
 
@@ -72,7 +72,7 @@ def documentation(bot, trigger):
 
 def obfuscation(bot, trigger):
     text="If you need to obfuscate your IP addresses, replace them with addresses of RFC5737."
-        if trigger.group(2):
+    if trigger.group(2):
                 text=trigger.group(2) + ": " + text
     bot.say(text, 1)
 
