@@ -80,7 +80,7 @@ def ids(bot, trigger):
     text="If you are using certificate authentication, then the ID of the participants must be confirmed by its own certificate. "
     text+="This is done by putting it into a SAN. Make sure the ID has a normal format. "
     text+="The human readable type (foo@bar.com for example is an email address) must conform with the type that is set in the certificate."
-    text+="E.g.: having foo@bar.com set as ID, but the SAN is "DNS:foo@bar.com" will probably not work. strongSwan also does not parse parts of the DN."
+    text+='E.g.: having foo@bar.com set as ID, but the SAN is "DNS:foo@bar.com" will probably not work. strongSwan also does not parse parts of the DN.'
     text+="It only compares the whole DN to the ID and all SAN values to the ID."
     if (trigger.group(2):
         text=trigger.group(2) + ": " + text
