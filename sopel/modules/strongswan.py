@@ -55,7 +55,7 @@ def logging(bot, trigger):
 	text+="Try using a file logger with flush_line=yes, to create a discrete log file with strongswan's logs. "
 	text+="Refrain from using log level 4."
 	if trigger.group(2):
-		text=trigger.group(2) ": " + text
+		text=trigger.group(2) + ": " + text
 	bot.say(text, 1)
 
 def pastebin(bot, trigger):
