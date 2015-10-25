@@ -38,7 +38,8 @@ entries={
 	"pastebin" : pastebin,
 	"documentation" : documentation,
 	"obfuscation" : obfuscation,
-	"logging" : "logging
+	"logging" : logging,
+	"IDs" : "ids
 	}
 
 def help(bot, trigger):
@@ -85,14 +86,20 @@ def ids(bot, trigger):
 		text=trigger.group(2) + ": " + text
 	bot.say(text,1)
 
-@rule('*.*')
+@rule('\..*')
 @example('.pastebin',
 	r'Use a pastebin for any text longer than three lines. Do not paste into the channel.',
 	re=true
 
 def strongswan(bot,trigger):
-	searchterm = trigger.group(1)
-	match=entries[searchterm]
-	if match != None:
-		match(bot, trigger)
-
+	# check if privmsg or in #strongswan
+	if trigger.is_privmsg or trigger.sender == "#strongswan":
+		searchterm = trigger.group(1)
+		if searchterm == "list" and trigger.group(2) == "strongswan":
+			bot.say(entries.keys())	
+			return
+		match=entries[searchterm]
+		if match != None:
+			match(bot, trigger)
+			return
+	return
